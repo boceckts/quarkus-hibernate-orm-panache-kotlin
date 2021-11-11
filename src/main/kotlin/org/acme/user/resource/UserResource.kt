@@ -13,5 +13,5 @@ class UserResource(
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    fun hello() = "Hello User Resource ${userRepository.findByName("default")}"
+    fun hello() = "Hello User Resource ${userRepository.findByName("default")?.name}"
 }

@@ -13,5 +13,5 @@ class PropertyResource(
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    fun hello() = "Hello Property Resource ${propertyRepository.findByName("default")}"
+    fun hello() = "Hello Property Resource ${propertyRepository.findByName("default")?.name}"
 }
